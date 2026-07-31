@@ -12,6 +12,6 @@ resource "aws_security_group" "sabotaged_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["100.12.79.25/32"] #tfsec:ignore:aws-vpc-no-public-ingress-sgr #tfsec:ignore:AWS006
+    cidr_blocks = ["100.12.79.25/32"] 
   }
 }
