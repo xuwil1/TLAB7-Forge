@@ -25,7 +25,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
   }
 }
 
-
 resource "aws_security_group" "sabotaged_sg" {
   name        = "tlab7-exposed-sg"
   description = "A dangerously exposed security group"
