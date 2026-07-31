@@ -35,4 +35,4 @@ resource "aws_security_group" "sabotaged_sg" {
     protocol    = "tcp"  
     cidr_blocks = ["100.12.79.25/32"] # SABOTAGE: SSH exposed to the world  
   }  
-}  
+}
