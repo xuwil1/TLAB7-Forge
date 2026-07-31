@@ -1,4 +1,0 @@
-exclude:
-  - aws-vpc-no-public-ingress-sgr
-  - aws-vpc-no-public-ingress-sg
-  - AWS006
