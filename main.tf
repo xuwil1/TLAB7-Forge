@@ -26,6 +26,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
 }
 
 
+#tfsec:ignore:aws-vpc-no-public-ingress-sgr
 resource "aws_security_group" "sabotaged_sg" {
   name        = "tlab7-exposed-sg"
   description = "A dangerously exposed security group"
@@ -34,6 +35,6 @@ resource "aws_security_group" "sabotaged_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["100.12.79.25/32"] #tfsec:ignore:aws-vpc-no-public-ingress-sgr
+    cidr_blocks = ["100.12.79.25/32"]
   }
 }
